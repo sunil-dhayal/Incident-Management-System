@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <h2>{{ user.email }}</h2>
+    <a href="{% url 'users:profile' %}">Back to Profile</a> |
+    <a href="{% url 'incidents:create' %}">Create new incident</a> |
+    <a href="{% url 'users:logout' %}">Logout</a>
+    <h1>My Incidents</h1>
+
+    <form method="get">
+        {{ search_form|crispy }}
+        <button type="submit">Search</button>
+    </form>
+    <hr>
+    {% if incidents %}
+        <ul>
+            {% for incident in incidents %}
+                <li>
+                    <p>{{ incident.incident_id }} {{ incident.description }} (Priority: {{ incident.priority }}, Status: {{ incident.status }})</p>
+                    <a href="{% url 'incidents:update_incident' incident.incident_id %}">Edit</a>
+                    <small>Created at: {{ incident.created_at }}</small>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No incidents reported yet.</p>
+    {% endif %}
+
+{% endblock %}
