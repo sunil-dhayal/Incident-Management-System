@@ -7,19 +7,17 @@ You have to create a REST API for an incident management system.
 
 ## Development Environment
 
-Ubuntu (Version 18 & above), Development Language Python 3.8 and above, Database MySQL (Preferred)/ PostgreSQL & React.JS/ or any language for the front end. If you do not have expertise in the front end, then you can demonstrate the same using Postman.
-The Front for the incident management system can be in any language you are comfortable in and need to create the following
+Ubuntu (Version 18 & above), Development Language Python 3.8 and above, Django and Database MySQL.
 
 ## 1. Front-End development: 
-You need to create the following using ReactJs or any language.
-a. Registration Page for the user (See file registration.png)
-b. Login Page (Login.png)
-c. Forgot Password (forgot password.png)
-d. Create/view/edit- Incident- Use your own UI based on the inputs given below
-in the backend section.
+The key functionalities are:
+  a. Registration Page for the user
+  b. Login Page
+  c. Forgot Password
+  d. Create/view/edit- Incident- Use your own UI based on the inputs given below in the backend section.
 
 ## 2. Back-End Development:
-This would need to be done using Python/Django Rest Framework and should allow a user to log in and create incidents. You need to use MySQL (preferred) The Key functionalities to be demonstrated for the entire solution:
+This is implemented using Python/Django Rest Framework. It allows a user to log in and create incidents. It is using sqlite but soon will be replace with MySQL. The Key functionalities for the entire solution are:
   a. System should allow you to create multiple users.
   b. Each User should be unique and should have the following details. You need to use any library wherein the moment one enters the pin code, it should auto-select the City and Country,
     i. User Name
