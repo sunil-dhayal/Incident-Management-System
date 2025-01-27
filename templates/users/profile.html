@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Welcome, {{ user.email }}!</h2>
+
+    <a href="{% url 'incidents:create' %}">Create Incident</a> |
+    <a href="{% url 'incidents:incident_list' %}">View My Incidents</a> |
+    <a href="{% url 'users:logout' %}">Logout</a>
+
+    <h2>User Information</h2>
+    <p>First Name: {{ user.first_name }} Last Name: {{ user.last_name }}</p>
+    <p>User Type: {{ user.user_type }}</p>
+    <p>Address: {{ user.address }}</p>
+    <p>Country: {{ user.country }} State: {{ user.state }} City: {{ user.city }} Pin Code: {{user.pincode}}</p>
+    <p>Mobile Number: {{ user.mobile_number }}</p>
+    <p>Fax: {{ user.fax }} Phone: {{ user.phone }}</p>
+{% endblock %}
