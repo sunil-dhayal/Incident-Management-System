@@ -18,8 +18,8 @@ c. Forgot Password (forgot password.png)
 d. Create/view/edit- Incident- Use your own UI based on the inputs given below
 in the backend section.
 
-## 2. Back-End Development – this would need to be done using Python/Django Rest
-Framework and should allow a user to log in and create incidents. You need to use MySQL (preferred) The Key functionalities to be demonstrated for the entire solution:
+## 2. Back-End Development:
+This would need to be done using Python/Django Rest Framework and should allow a user to log in and create incidents. You need to use MySQL (preferred) The Key functionalities to be demonstrated for the entire solution:
   a. System should allow you to create multiple users.
   b. Each User should be unique and should have the following details. You need to use any library wherein the moment one enters the pin code, it should auto-select the City and Country,
     i. User Name
